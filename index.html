@@ -233,57 +233,7 @@
 <li>자바스크립트는 완전한 함수형 언어가 아니다. </li>
 <li>현실 세계의 프로그램에서 side-effect는 존재할 수 밖에 없다. (ajax call, DOM 조작, logging 등)</li>
 </ul>
-<p>함수형 프로그래밍을 실제 개발환경에 맞게 적용하려면 어떻게 해야할까?</p>
-<h4 id="Problem-My-Way-Sandwich"><a href="#Problem-My-Way-Sandwich" class="headerlink" title="Problem: My Way Sandwich"></a>Problem: My Way Sandwich</h4><p>주어진 재료와 주문에 따라 샌드위치를 만들어주는 MyWaySandwich() 프로그램을 작성해보자</p>
-<ul>
-<li>메뉴판에 샌드위치는 총 두 가지: 이탈리안 BLT, 필리치즈 스테이크.</li>
-<li>메뉴판에 없는 주문은 받지 않으며, 거래를 종료한다.</li>
-<li>필수재료가 떨어지면 샌드위치는 즉시 매진 상태가 된다.</li>
-<li>돈이 부족한 경우 거래를 거절한다.</li>
-<li>재료는 g 단위로 제공한다, 레시피에 적힌대로 잘랐을 때 양이 부족하면 재료 부족상태가 된다.</li>
-<li><p>빵은 무제한이며, 무조건 하나를 반으로 잘라서 가장 바깥쪽에서 재료를 감싸야한다. </p>
-</li>
-<li><p>제약조건</p>
-<ul>
-<li>비동기성은 일단 무시하자</li>
-<li>한번에 주문은 한개만 받는다.</li>
-<li>거스름돈은 무시한다</li>
-<li>소스는 없다</li>
-</ul>
-</li>
-</ul>
-<p>메뉴별 레시피는 아래와 같다.</p>
-<ul>
-<li>이탈리안BLT<ul>
-<li>재료: 베이컨10g, 상추2g, 토마토 2g</li>
-<li>가격: 5500</li>
-<li>레시피:<ol>
-<li>베이컨을 150도에서 3초동안 굽고나서 2등분 한다.</li>
-<li>상추를 2조각으로 찢는다.</li>
-<li>토마토를 3조각으로 슬라이스한다. </li>
-<li>토마토, 상추, 베이컨을 빵에 차례로 넣는다.</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>필리치즈스테이크<ul>
-<li>재료: 스테이크 30g, 양파 10g, 치즈 10g</li>
-<li>가격: 8000</li>
-<li>레시피:<ol>
-<li>스테이크를 30등분으로 다지고 나서 140도에서 5초동안 볶는다.</li>
-<li>양파를 10조각 슬라이스해서 자른 후 3초동안 볶는다.</li>
-<li>치즈를 2초간 60도에서 가열한다.</li>
-<li>스테이크, 양파, 치즈를 빵에 차례로 넣는다.</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<p>INPUT 예시<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"menu"</span>: <span class="string">"필리치즈스테이크"</span>, <span class="attr">"money"</span>: <span class="number">8900</span> &#125;</div></pre></td></tr></table></figure></p>
-<p>OUTPUT 예시<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"type"</span>: <span class="string">"필리치즈스테이크 샌드위치"</span>,</div><div class="line">  <span class="attr">"sandwich"</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"name"</span>: <span class="string">"빵"</span>,</div><div class="line">      <span class="attr">"cut"</span>: &#123;</div><div class="line">        <span class="attr">"type"</span>: <span class="string">"sliced"</span>,</div><div class="line">        <span class="attr">"pieces"</span>: <span class="number">0.5</span></div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"name"</span>: <span class="string">"스테이크"</span>,</div><div class="line">      <span class="attr">"cut"</span>: &#123;</div><div class="line">        <span class="attr">"type"</span>: <span class="string">"chopped"</span>,</div><div class="line">        <span class="attr">"pieces"</span>: <span class="number">30</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"grilled"</span>: &#123;</div><div class="line">        <span class="attr">"duration"</span>: <span class="number">5000</span>,</div><div class="line">        <span class="attr">"temperature"</span>: <span class="number">140</span></div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"name"</span>: <span class="string">"양파"</span>,</div><div class="line">      <span class="attr">"cut"</span>: &#123;</div><div class="line">        <span class="attr">"type"</span>: <span class="string">"sliced"</span>,</div><div class="line">        <span class="attr">"pieces"</span>: <span class="number">10</span></div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"name"</span>: <span class="string">"치즈"</span>,</div><div class="line">      <span class="attr">"grilled"</span>: &#123;</div><div class="line">        <span class="attr">"duration"</span>: <span class="number">2000</span>,</div><div class="line">        <span class="attr">"temperature"</span>: <span class="number">60</span></div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"name"</span>: <span class="string">"빵"</span>,</div><div class="line">        <span class="attr">"cut"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"sliced"</span>,</div><div class="line">          <span class="attr">"pieces"</span>: <span class="number">0.5</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>제공되는 API<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 공통상수</span></div><div class="line"><span class="keyword">const</span> BLT = <span class="string">'이탈리안BLT'</span></div><div class="line"><span class="keyword">const</span> PHILLY = <span class="string">'필리치즈스테이크'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> STOCKS = &#123;</div><div class="line">  <span class="string">'베이컨'</span>: <span class="number">200</span>,</div><div class="line">  <span class="string">'상추'</span>: <span class="number">100</span>,</div><div class="line">  <span class="string">'스테이크'</span>: <span class="number">250</span>,</div><div class="line">  <span class="string">'양파'</span>: <span class="number">40</span>,</div><div class="line">  <span class="string">'치즈'</span>: <span class="number">100</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment">* @param menu string 메뉴이름</span></div><div class="line"><span class="comment">* @param money number 지불액</span></div><div class="line"><span class="comment">* @returns &#123; order &#125; </span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">order</span>(<span class="params">menu, money</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    menu,</div><div class="line">    money</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment">* @param order &#123; order &#125; order()를 통해 주문한 주문서</span></div><div class="line"><span class="comment">* @returns &#123;*&#125; 조리된 샌드위치의 배열  </span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyWaySandwich</span>(<span class="params">order</span>) </span>&#123;</div><div class="line">  <span class="comment">// 여기에 코드 작성</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Main</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> orders = [</div><div class="line">    order(PHILLY, <span class="number">5500</span>), </div><div class="line">    order(BLT, <span class="number">6000</span>), </div><div class="line">    order(PHILLY, <span class="number">10000</span>), </div><div class="line">    order(PHILLY, <span class="number">8900</span>)</div><div class="line">  ]</div><div class="line">  </div><div class="line">  orders.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">order</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(MyWaySandwich(order))</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">Main();</div></pre></td></tr></table></figure></p>
-<p><a href="https://jsfiddle.net/doublejnu/pmey550o/" target="_blank" rel="external">문제풀러 가기</a></p>
-<p>해답은 추후에..</p>
+<p>다음 포스팅에서는 함수형 프로그래밍을 실제 개발환경에 맞게 적용하려면 어떻게 해야할지 알아보도록 하겠다</p>
 
       
     </div>
