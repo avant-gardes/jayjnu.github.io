@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2017년 10월 4째주 프론트엔드이슈 | Frontend Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. body-parser 가 Express.js의 코어 미들웨어로express 4.16.0 릴리즈에 기존 body-parser 라이브러리의 역할을 하는 express.json이 패키지로 추가됐다.이제 매번 express로 리퀘스트 바디를 파싱하기위해 따로 라이브러리를 추가해야 하는 불편함이 사라졌다. 관련 링크: https://github.com/expr">
+<meta name="keywords" content="Functional Programming,node.js,chrome,test,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017년 10월 4째주 프론트엔드이슈">
+<meta property="og:url" content="https://jayjnu.github.io/2017/10/29/oct-4th-week/index.html">
+<meta property="og:site_name" content="Frontend Blog">
+<meta property="og:description" content="1. body-parser 가 Express.js의 코어 미들웨어로express 4.16.0 릴리즈에 기존 body-parser 라이브러리의 역할을 하는 express.json이 패키지로 추가됐다.이제 매번 express로 리퀘스트 바디를 파싱하기위해 따로 라이브러리를 추가해야 하는 불편함이 사라졌다. 관련 링크: https://github.com/expr">
+<meta property="og:locale" content="ko, en">
+<meta property="og:updated_time" content="2017-11-16T05:57:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017년 10월 4째주 프론트엔드이슈">
+<meta name="twitter:description" content="1. body-parser 가 Express.js의 코어 미들웨어로express 4.16.0 릴리즈에 기존 body-parser 라이브러리의 역할을 하는 express.json이 패키지로 추가됐다.이제 매번 express로 리퀘스트 바디를 파싱하기위해 따로 라이브러리를 추가해야 하는 불편함이 사라졌다. 관련 링크: https://github.com/expr">
+  
+    <link rel="alternate" href="/atom.xml" title="Frontend Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Frontend Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Javascript, HTML, CSS</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://jayjnu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-oct-4th-week" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/29/oct-4th-week/" class="article-date">
+  <time datetime="2017-10-29T12:30:32.000Z" itemprop="datePublished">2017-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Weekly/">Weekly</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2017년 10월 4째주 프론트엔드이슈
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-body-parser-가-Express-js의-코어-미들웨어로"><a href="#1-body-parser-가-Express-js의-코어-미들웨어로" class="headerlink" title="1. body-parser 가 Express.js의 코어 미들웨어로"></a>1. body-parser 가 Express.js의 코어 미들웨어로</h2><p>express 4.16.0 릴리즈에 기존 body-parser 라이브러리의 역할을 하는 express.json이 패키지로 추가됐다.<br>이제 매번 express로 리퀘스트 바디를 파싱하기위해 따로 라이브러리를 추가해야 하는 불편함이 사라졌다.</p>
+<p>관련 링크: <a href="https://github.com/expressjs/express/releases/tag/4.16.0" target="_blank" rel="noopener">https://github.com/expressjs/express/releases/tag/4.16.0</a></p>
+<h2 id="2-크롬-62-릴리즈"><a href="#2-크롬-62-릴리즈" class="headerlink" title="2. 크롬 62 릴리즈"></a>2. 크롬 62 릴리즈</h2><p>크롬 62 버전이 나오며 다음의 기능들이 추가되었다</p>
+<h3 id="network-information-API"><a href="#network-information-API" class="headerlink" title="network information API"></a>network information API</h3><p>기존에 제공하던 navigator.connection.type이라는 api는 이론적인 네트워크 상태 결과값만을 제공한다. 예를 들어 연결은 wifi지만 실제로는 3g 핫스팟에 연결된 핸드폰일 경우 wifi가 리턴된다.<br>반면에 새로 추가된 navigator.connection.effectiveType 속성은 이론적인 추정치가 아닌 실제 반환되는 값을 측정한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 기존 API</span></span><br><span class="line"><span class="built_in">console</span>.log(navigator.connection.type);</span><br><span class="line"><span class="comment">// returns wifi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//신규 API</span></span><br><span class="line"><span class="built_in">console</span>.log(navigator.getConnectionUrl.effectiveType);</span><br><span class="line"><span class="comment">//returns 4G</span></span><br></pre></td></tr></table></figure>
+<p>속도가 느린 디바이스일경우 더 축소된 버전의 웹페이지를 제공하는 등의 기법을 사용하면. 느린 네트워크에서도 사용자 경험을 향상시킬 수 있다.</p>
+<h3 id="오픈타입-가변-폰트-OpenType-Variable-Fonts"><a href="#오픈타입-가변-폰트-OpenType-Variable-Fonts" class="headerlink" title="오픈타입 가변 폰트 (OpenType Variable Fonts)"></a>오픈타입 가변 폰트 (OpenType Variable Fonts)</h3><p>기존에는 폰트파일 하나당 하나의 스타일만 적용 가능 했다. 예를 들어 폰트 하나에 Bold, Italic, Light 등의 스타일을 클라이언트에서 로드하려면 각각의 스타일에 해당하는 총 3개의 폰트 파일이 필요했다.<br>이번에 제공되는 오픈타입 가변 폰트를 사용하면 하나의 파일만으로도 수많은 폰트 스타일을 적용할 수 있다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.heading</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">"Avenir Next Variable"</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">48px</span>;</span><br><span class="line">  <span class="attribute">font-variation-settings</span>: <span class="string">'wght'</span> <span class="number">700</span>, <span class="string">'wdth'</span> <span class="number">75</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">"Avenir Next Variable"</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">font-variation-settings</span>: <span class="string">'wght'</span> <span class="number">400</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>오픈타입 가변 폰트를 이용하면 반응형 타이포그래피를 적용하기 더 쉬워질 뿐 아니라 페이지 로드 속도도 개선할 수 있다.</p>
+<p>관련 링크: <a href="https://medium.com/@tiro/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369" target="_blank" rel="noopener">Introducing OpenType Variable Fonts</a></p>
+<h3 id="DOM-Element에서-미디어-캡쳐"><a href="#DOM-Element에서-미디어-캡쳐" class="headerlink" title="DOM Element에서 미디어 캡쳐"></a>DOM Element에서 미디어 캡쳐</h3><p>video나 audio같은 HTMLMediaElements에서 바로 MediaStream으로 컨텐트를 실시간 캡쳐할 수 있다.<br>HTMLMediaElement에 captureStream()을 호출하여 스트리밍된 컨텐츠를 변형하거나 조작할 수 있으며 기록하거나 원격으로 전송할 수 있다.</p>
+<h3 id="HTTP-페이지에-‘안전하지-않음’-라벨"><a href="#HTTP-페이지에-‘안전하지-않음’-라벨" class="headerlink" title="HTTP 페이지에 ‘안전하지 않음’ 라벨"></a>HTTP 페이지에 ‘안전하지 않음’ 라벨</h3><p>크롬 62 버전부터 유저가 http페이지를 방문할 시 해당 페이지에 ‘안전하지 않음’을 상단 주소바에 표기한다.</p>
+<h3 id="기타-추가-및-변경-사항"><a href="#기타-추가-및-변경-사항" class="headerlink" title="기타 추가 및 변경 사항"></a>기타 추가 및 변경 사항</h3><ul>
+<li>Payment Request API가 iOS 용 크롬에 탑재</li>
+<li>WebVR origin trial을 통해 본인의 사이트에 실험적으로 VR 경험을 제공할 수 있는 기회 제공.</li>
+</ul>
+<h2 id="3-부분적용-또는-커링-함수를-사용시-자바스크립트-스택-트레이스가-모호해질-수-있다"><a href="#3-부분적용-또는-커링-함수를-사용시-자바스크립트-스택-트레이스가-모호해질-수-있다" class="headerlink" title="3. 부분적용 (또는 커링) 함수를 사용시 자바스크립트 스택 트레이스가 모호해질 수 있다."></a>3. <a href="https://hackernoon.com/partially-applied-curried-functions-could-obfuscate-the-javascript-stack-trace-84d66bd8032e" target="_blank" rel="noopener">부분적용 (또는 커링) 함수를 사용시 자바스크립트 스택 트레이스가 모호해질 수 있다.</a></h2><p>함수형 프로그래밍에서는 함수를 정의할 때 전달받는 매개변수의 이름을 명시적으로 선언하지 않고, 함수의 composition에 의해 정의되는 Point-free style을 사용한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// non-point-free style</span></span><br><span class="line"><span class="keyword">const</span> initials = <span class="function">(<span class="params">name</span>) =&gt;</span> name</span><br><span class="line">  .split(<span class="string">' '</span>)</span><br><span class="line">  .map(compose(toUpperCase, head))</span><br><span class="line">  .join(<span class="string">' '</span>)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// point-free style</span></span><br><span class="line"><span class="keyword">const</span> initials = compose(</span><br><span class="line">  join(<span class="string">'. '</span>), </span><br><span class="line">  map(compose(toUpperCase, head)), </span><br><span class="line">  split(<span class="string">' '</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>예시 출처: by <a href="https://stackoverflow.com/a/43620110" target="_blank" rel="noopener">Brunno</a></p>
+<p>point-free style 코딩 스타일의 경우 일일이 이름을 지어야 하는 개발자들의 고충을 덜어주고, 코드를 더욱 간결하게 해줄 수 있지만,<br>에러가 터졌을 때 스택 트레이스가 어느 부분에서 에러가 터졌는지 제대로 알려주지 않는다는 문제가 있다.</p>
+<p>이 문제는 point-free 함수를 호출하는 non-point-free 함수를 중간에 삽입하여 직접 스택 프레임을 만듦으로써 해결 할 수 있다.</p>
+<p>해결방법은 본문 참고 (부제: Create a function yourself to establish a stack frame)</p>
+<h2 id="4-적당한-양의-대부분은-모듈간-결합에-관한-테스트코드를-작성하라"><a href="#4-적당한-양의-대부분은-모듈간-결합에-관한-테스트코드를-작성하라" class="headerlink" title="4. 적당한 양의, 대부분은 모듈간 결합에 관한, 테스트코드를 작성하라"></a>4. <a href="https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c" target="_blank" rel="noopener">적당한 양의, 대부분은 모듈간 결합에 관한, 테스트코드를 작성하라</a></h2><p>socket.io의 참시자인 Guillermo Rauch는 한줄의 트윗을 남겼다</p>
+<blockquote>
+<p>Write tests. Not too many. Mostly integration</p>
+</blockquote>
+<p>TC39의 멤버이자 페이팔 엔지니어인 Kent C. Dodds는 이를 보고 각각이 의미하는 것이 무엇인지 본인의 해석을 장문의 글로 남겼는데, 이를 짧게 요약해보았다.</p>
+<ol>
+<li><p>Write tests (테스트 코드를 작성하라)</p>
+<ul>
+<li>테스트코드를 작성하는 것은 개발 당시에는 시간을 조금 늦출 지는 몰라도 추후 유지보수에 들어가는 시간을 대폭 줄여준다. </li>
+<li>타입체크와 린팅 만으로는 비즈니스 로직에 잠재해있는 버그를 검사하진 못한다.</li>
+</ul>
+</li>
+<li><p>Not too many (적당한 양으로)</p>
+<ul>
+<li>테스트 할 필요없는 모든 코드에 대해 테스트 케이스를 작성하는 것은 시간 낭비일 뿐더러 개발 효율을 오히려 다운시킨다. </li>
+<li>스태틱 타입체커나 린트 툴이 담당할 수 없는 비즈니스 로직에 관한 코드에만 적용하는 것이 적절하다.</li>
+</ul>
+</li>
+<li><p>Mostly integration (대부분은 결합의 단계에 대해서만)</p>
+<ul>
+<li>테스팅은 피라미드 상위 순서대로 E22, Integration, Unit Testing으로 나눌 수 있으며 피라미드 위에 있을 수록 테스트 환경 조성에 시간이 많이 든다.</li>
+<li>시간대비 효율 때문에 대부분의 경우 unit testing을 강조한다.</li>
+<li>그러나 유닛테스팅만 집중할 경우 다음의 상황이 발생한다: <a href="https://cdn-images-1.medium.com/max/800/0*eCs8GoVZVksoQtQx.gif" target="_blank" rel="noopener">이미지</a></li>
+<li>E2E테스트의 경우 신뢰도가 매우 높지만 리소스가 너무 많이 들어간다.</li>
+<li>결합 테스트는 위에 언급한 두가지 테스트 사이에서 적절히 균형을 맞춰준다.</li>
+</ul>
+</li>
+</ol>
+<h2 id="5-webpack-dashboard-1-0-출시"><a href="#5-webpack-dashboard-1-0-출시" class="headerlink" title="5. webpack-dashboard 1.0 출시"></a>5. <a href="https://github.com/FormidableLabs/webpack-dashboard/blob/master/README.md" target="_blank" rel="noopener">webpack-dashboard 1.0 출시</a></h2><p>웹팩의 빌드 스테이터스를 한눈에 볼 수 있는 대쉬보드플러그인이 출시되었다.<br>본인들 소개로는 dev-server를 띄울 때 나오는 콘솔 메세지가 NASA에서 일하는 느낌을 주도록 바뀌었다니 활용하면 좋을 듯 하다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jayjnu.github.io/2017/10/29/oct-4th-week/" data-id="cjb1j6akp000ax0st1klpwvhm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Functional-Programming/">Functional Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/05/oct-5th-week/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2017년 10월 5째주 ~ 11월 1째주 프론트엔드 이슈
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/10/Brief-Introduction-to-Functional-Javascript/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Brief Introduction to Functional Javascript</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Weekly/">Weekly</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Exam/">Exam</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functional-Programming/">Functional Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/">GraphQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Job-Interview/">Job Interview</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matter-js/">Matter.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Muuri/">Muuri</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-js/">React.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rewind/">Rewind</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VSCode/">VSCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Assembly/">Web Assembly</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular-js/">angular.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/handbook/">handbook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/interview/">interview</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tips/">tips</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/w3c/">w3c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webcomponents/">webcomponents</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/workflow/">workflow</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Exam/" style="font-size: 10px;">Exam</a> <a href="/tags/Functional-Programming/" style="font-size: 15px;">Functional Programming</a> <a href="/tags/GraphQL/" style="font-size: 10px;">GraphQL</a> <a href="/tags/Job-Interview/" style="font-size: 10px;">Job Interview</a> <a href="/tags/Matter-js/" style="font-size: 10px;">Matter.js</a> <a href="/tags/Muuri/" style="font-size: 10px;">Muuri</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/React-js/" style="font-size: 10px;">React.js</a> <a href="/tags/Rewind/" style="font-size: 10px;">Rewind</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Web-Assembly/" style="font-size: 10px;">Web Assembly</a> <a href="/tags/angular-js/" style="font-size: 10px;">angular.js</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/handbook/" style="font-size: 10px;">handbook</a> <a href="/tags/interview/" style="font-size: 10px;">interview</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/node-js/" style="font-size: 15px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/w3c/" style="font-size: 10px;">w3c</a> <a href="/tags/webcomponents/" style="font-size: 10px;">webcomponents</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/workflow/" style="font-size: 10px;">workflow</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/12/11/dec-2nd-week/">2017년 12월 2째주 프론트엔드 이슈</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/26/nov-4th-week/">nov-4th-week</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/19/nov-3rd-week/">11월 3째주 프론트엔드 이슈</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/05/oct-5th-week/">2017년 10월 5째주 ~ 11월 1째주 프론트엔드 이슈</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/29/oct-4th-week/">2017년 10월 4째주 프론트엔드이슈</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 jayjnu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
